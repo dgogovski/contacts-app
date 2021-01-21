@@ -166,9 +166,9 @@ class database:
                                 timestamp = datetime.strptime(user_timestamp[0], '%Y-%m-%d %H:%M:%S')
                                 seconds = (datetime.now() - timestamp).total_seconds()
                                 if seconds < 10:
-                                    contact.set_activity(Online)
+                                    contact.set_activity('Online')
                                 else:
-                                    contact.set_activity(Offline)
+                                    contact.set_activity('Offline')
                                 contacts.append(contact)
                             else:
                                 # No timestamp
