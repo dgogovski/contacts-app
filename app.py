@@ -57,7 +57,8 @@ def login_post():
         if user.verify_password(password) is True:
             return redirect(url_for('display_contacts', user_id=user.get_id()))
         else:
-            return redirect('/login')
+            return 'Unsuccessful login'
+            # return redirect('/login')
     # elif number is not None:
     #     if number.verify_password(password) is True:
     #         return redirect(url_for('display_contacts', user_id=number.id))
