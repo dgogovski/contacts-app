@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>View/edit contact</title>
+	<style>
+		body {text-align: center;}
+		h1 {color: SlateBlue;}
+		label {color: SlateBlue;}
+	</style>
+</head>
+<body>
+	<h1>Contact information</h1>
+		<form action="/contacts/{{user_id}}/{{ contact.get_id() }}" method="post">
+{#            <input type="hidden" name="id" value="{{ contact.id }}">#}
+			<label><b>Name: <input type="text" name="Name" value="{{ contact.get_name() }}"></b></label>
+			<br><br>
+			<label><b>Number: <input type="text" name="Number" value="{{ contact.get_number() }}"></b></label>
+			<br><br>
+			<label><b>Note: <input type="text" name="Note" value="{{ contact.get_note() }}"></b></label>
+			<br><br>
+			<input type="submit" name="Update_button" value="Update">
+			<input type="submit" name="Delete_button" value="Delete">
+		</form>
+</body>
+</html>

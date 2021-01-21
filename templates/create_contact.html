@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add contact</title>
+	<style>
+		body {text-align: center;}
+		h1 {color: SlateBlue;}
+		label {color: SlateBlue;}
+	</style>
+</head>
+<body>
+<form action="/contacts/{{user_id}}/create" method="post">
+	<h1>Create contact</h1>
+
+	<label><b>Name: <input type="text" name="Name"></b></label>
+	<br><br>
+	<label><b>Number: <input type="text" name="Number"></b></label>
+	<br><br>
+	<label><b>Note: <input type="text" name="Note"></b></label>
+	<br><br>    
+	<input type="submit" name="Create contact" value="Create">
+	<br><br>
+</form>
+</body>
+</html>

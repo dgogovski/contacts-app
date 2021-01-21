@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contacts</title>
+	<style>
+		body {text-align: center;}
+		h1 {color: SlateBlue;}
+		a {color: SlateBlue; font-size:20px}
+	</style>
+</head>
+<body>
+	<h1><strong>Contacts</strong></h1>
+	<a href = "/contacts/{{ user_id }}/create"><b>Add contact</b></a>
+	<a href = "/contacts/{{ user_id }}/myinfo"><b>My Profile</b></a>
+	<br/><br/><br/><br/>
+	{% for contact in contacts %}
+		<a href = "/contacts/{{ user_id }}/{{ contact.get_id() }}">
+		{{ contact.get_name() }}
+		<br/>
+		Status: {{ contact.get_activity() }}</a>
+		<br/><br/>
+	{% endfor %}
+</body>
+</html>
+
