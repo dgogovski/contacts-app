@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>View/edit contact</title>
+	<style>
+		body {text-align: center; background-color: white; background-image: url(../../static/picture_to_add.jpeg); background-size: cover; background-attachment: fixed;}
+		h1 {color: SlateBlue;}
+		label {color: SlateBlue;}
+		#edit {background-color: white; align-self: center; margin-top: 220px; margin-left: auto; margin-right: auto; width: 600px; height: 280px; border: 4px solid SlateBlue; border-radius: 6px;}
+		#update {background-color: white; border: 2px solid SlateBlue; color: SlateBlue; height: 50px; width: 220px; border-radius: 4px; font-size: 18px;}
+		#delete {background-color: white; border: 2px solid SlateBlue; color: SlateBlue; height: 50px; width: 220px; border-radius: 4px; font-size: 18px;}
+		#update:hover {background-color: SlateBlue; color: white;}
+		#delete:hover {background-color: SlateBlue; color: white;}
+	</style>
+</head>
+<body>
+	<div id=edit>
+	<h1>Contact information</h1>
+		<form action="/contacts/{{user_id}}/{{ contact.get_id() }}" method="post">
+{#            <input type="hidden" name="id" value="{{ contact.id }}">#}
+			<label><b>Name: <input type="text" name="Name" value="{{ contact.get_name() }}"></b></label>
+			<br><br>
+			<label><b>Number: <input type="text" name="Number" value="{{ contact.get_number() }}"></b></label>
+			<br><br>
+			<label><b>Note: <input type="text" name="Note" value="{{ contact.get_note() }}"></b></label>
+			<br><br>
+			<input id=update type="submit" name="Update_button" value="Update">
+			<input id=delete type="submit" name="Delete_button" value="Delete">
+		</form>
+	</div>
+</body>
+</html>

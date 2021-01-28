@@ -1,0 +1,37 @@
+<!DOCOTYPE html>
+<html lang=eng>
+<head>
+	<meta charset="UTF-8">
+	<title>Registration</title>
+	<style>
+		body {text-align: center; background-color: white; background-image: url(../static/picture_to_add.jpeg); background-size: cover; background-attachment: fixed;}
+		h1 {color: SlateBlue;}
+		label {color: SlateBlue;}
+		#registration {background-color: white; align-self: center; margin-top: 250px; margin-left: auto; margin-right: auto; width: 600px; height: 260px; border: 4px solid SlateBlue; border-radius: 6px;}
+		#sign_button {background-color: white; border: 2px solid SlateBlue; color: SlateBlue; height: 50px; width: 550px; border-radius: 4px; font-size: 22px;}
+		#usr_input {margin-right: 4px;}
+		#num_input {margin-left: 11px;}
+		input {font-size: 17px;}
+		#sign_button:hover {background-color: SlateBlue; color: white;}
+	</style>
+</head>
+<body>
+	<div id=registration>
+	<h1><strong>Create Acount</strong></h1>
+	<form action="/register" method="post">
+		<div id=inputs>
+		<label><b>Username</b></label>
+		<input id=usr_input name="username" type="text"/>
+		</br>
+		<label><b>Number</b></label>
+		<input id=num_input name="number" type="text"/>
+		</br>
+		<label><b>Password</b></label>
+		<input id=pwd_input name="password" type="password"/>
+		</br>
+		</br>
+		</div>
+		<input id=sign_button type="submit" name="sign_button" value="Sign in">
+	</form>
+	</div>
+</body>
