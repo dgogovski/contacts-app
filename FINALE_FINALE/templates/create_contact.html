@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add contact</title>
+	<style>
+		body {text-align: center; background-color: white; background-image: url(../../static/picture_to_add.jpeg); background-size: cover; background-attachment: fixed;}
+		h1 {color: SlateBlue;}
+		label {color: SlateBlue;}
+		#create_contact {background-color: white; align-self: center; margin-top: 220px; margin-left: auto; margin-right: auto; width: 600px; height: 285px; border: 4px solid SlateBlue; border-radius: 6px;}
+		#create_button {background-color: white; border: 2px solid SlateBlue; color: SlateBlue; height: 50px; width: 550px; border-radius: 4px; font-size: 22px;}
+	</style>
+</head>
+<body>
+<form action="/contacts/{{user_id}}/create" method="post">
+	<div id=create_contact>
+	<h1>Create contact</h1>
+
+	<label><b>Name: <input type="text" name="Name"></b></label>
+	<br><br>
+	<label><b>Number: <input type="text" name="Number"></b></label>
+	<br><br>
+	<label><b>Note: <input type="text" name="Note"></b></label>
+	<br><br>    
+	<input id=create_button type="submit" name="Create contact" value="Create">
+	<br><br>
+	</div>
+</form>
+</body>
+</html>
